@@ -1,0 +1,42 @@
+Today is {{ date }}, I want you to be my daily journal co-pilot.
+
+Here are some background information:
+
+{{ background_info }}
+
+I wrote down my random thoughts, notes, ideas, etc. Here's my journal today:
+
+{{ journal_content }}
+
+
+Now please do the following, using a first-person perspective:
+
+1. Write a version of my journal that is better formatted, logically structured, with improved writing without altering the meaning of my journal
+2. discover important insights into my life, act like a life coach, give me encouragements and suggestions
+3. summarise the key takeaways from my journal, in JSON format using the following template from first person's perspective:
+
+{
+  "summaries":
+  [
+    "I did this.",
+    "This happened, here's what I felt."
+  ]
+}
+
+4. Base on my journal, create an actionable to-do list of the tasks mentioned in my journal. do it in JSON using the following template:
+
+{
+  "Task name": "Task Description #label1 #label2",
+}
+
+Here is an example:
+{
+  "Develop an AI assistant": "I need to start developing an AI assistant using ChatGPT. #career",
+  "Invest in ASX": "I need to work out a plan to invest in the stock market. #finance"
+}
+
+Here are the available labels:
+
+{{ labels }}
+
+You can start now:

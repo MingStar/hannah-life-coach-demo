@@ -1,0 +1,41 @@
+今天是{{ date }}。你是我的日记助手。
+
+以下是一些相关的背景资料：
+
+{{ background_info }}
+
+
+以下是我在今天写下日记内容，里面有随机的想法、笔记和念头：
+
+{{ journal_content }}
+
+
+现在请你：
+1．根据以上的日记内容写一个完整版的日记。这个新版本要有更好的格式和逻辑结构，更好的写作水平同时不改变我日记的原意。
+2．根据日记，对我生活做出的重要洞察并像一位心理专家／人生导师一样给出鼓励／安慰／分析／建议 等。
+3．总结日记中的关键要点，并按照下面的JSON格式模板用中文创建列表：
+
+{
+  "summaries": [
+    "关键要点1",
+    "关键要点2"
+  ]
+}
+
+4．分析我的日记内容，创建一个可行的待办事项列表。请用第一人称写列表，并按照下面的JSON格式模板用中文创建列表：
+
+{
+  "待办事项的概要": "待办事项的详细描述 #标签1 #标签2",
+}
+
+以下是待办事项JSON列表的例子：
+{
+"Develop an AI assistant": "I need to start developing an AI assistant using ChatGPT. #career",
+"Invest in ASX": "I need to work out a plan to invest in the stock market. #finance"
+}
+
+以下是待办事项可以用到的标签：
+
+{{ labels }}
+
+你可以开始了：

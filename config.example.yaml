@@ -1,0 +1,39 @@
+---
+general:
+  log_level: INFO
+openai:
+  api_key:
+slack:
+  # your slack bot credentials
+  credentials:
+    signing_secret:
+    app_token:
+    bot_token:
+  # the id and names of your bot
+  bot:
+    id:
+    name:
+  # the channel to send logs to
+  system_logs_channel:
+  # channels for direct conversations
+  direct_conversation_channels:
+    -
+    -
+trello:
+  credentials: # trello bot user credentials
+    key:
+    token:
+  organization_id:
+  board_id:
+  todo_list_id:
+daily_journal:
+  - slack:
+      user:
+      channel:
+    language: en
+    trello:
+      board_id:
+      entries_list:
+      summaries_list:
+      todos_list:
+      background_info_list:

@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "hannah-slack-v2"
+version = "0.1.0"
+description = ""
+authors = ["Weiming Chen <mingstar215@gmail.com>"]
+readme = "README.md"
+#packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+slack-bolt = "^1.18.0"
+aiohttp = "^3.8.5"
+openai = "^0.27.8"
+apscheduler = "^3.10.1"
+pyyaml = "^6.0.1"
+py-trello = "^0.19.0"
+jinja2 = "^3.1.2"
+
+
+[tool.poetry.group.dev.dependencies]
+aiohttp-devtools = "^1.1"
+pre-commit = "^3.3.3"
+pytest = "^7.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+addopts = "--tb=short"
+
+
+[tool.pylint.messages_control]
+disable = """
+missing-module-docstring,
+missing-class-docstring,
+missing-function-docstring,
+logging-not-lazy,
+import-error,
+no-member,
+"""

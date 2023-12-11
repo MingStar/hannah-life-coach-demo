@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app:
+    image: hannah:latest
+    build:
+      dockerfile: Dockerfile
+      context: .
+    network_mode: host
+    volumes:
+      - "./config.yaml:/app/config.yaml"
